@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b0f2b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Header du profil */
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px; /* Remonter un peu */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+/* Titre Mes Projets */
+h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Changement ici pour un affichage vertical */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    align-items: center; /* Optionnel, pour centrer les éléments horizontalement */
+}
+.second-content {
+    display: flex;
+    flex-direction: row; /* Changement ici pour un affichage vertical */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 20%;
+}
+/* Liste des projets avec défilement */
+.project-list {
+    width: 60%; /* Réduit la largeur pour laisser de la place à "Ajouter un projet" */
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.1px);
+    -webkit-backdrop-filter: blur(1.1px);
+}
+
+.project-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.project-list li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-list h3 {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.project-list p {
+    font-size: 1em;
+    color: #fff;
+}
+
+.project-list a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.project-list a:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire caché par défaut */
+.add-project-form {
+    width: 35%; /* Ajustement pour être à côté de la liste des projets */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.1px);
+    -webkit-backdrop-filter: blur(1.1px);
+    display: none; /* Le formulaire est caché par défaut */
+}
+
+.add-project-form.active {
+    display: block; /* Formulaire visible lorsqu'il a la classe active */
+}
+
+.add-project-form h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+}
+
+.add-project-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #4CAF50;
+}
+
+.add-project-form input,
+.add-project-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+/* Bouton pour afficher le formulaire */
+.add-project-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.add-project-button:hover {
+    background-color: #45a049;
+}

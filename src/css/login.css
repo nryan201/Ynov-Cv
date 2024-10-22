@@ -1,0 +1,174 @@
+@import url("https://font.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0f2b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.wrapper, .wrapper-register, .forgot-password {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.1px);
+    -webkit-backdrop-filter: blur(1.1px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    padding-left: 45px; /* Ajout d'espace à gauche pour les icônes */
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    position: relative;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.input-box, .input-boxUser, .input-boxPass, .input-boxPass2 {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box i, .input-boxUser i, .input-boxPass i, .input-boxPass2 i {
+    position: absolute;
+    left: 15px; /* Position des icônes à gauche */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.eyePassword, .eyePassword2 {
+    position: absolute;
+    right: 50px; /* Positionner à droite */
+    top: 50%;
+    transform: translateY(-50%); /* Centrer verticalement */
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+}
+
+.eyePassword2 i.active {
+    color: #45a049; /* Par exemple, une couleur différente pour indiquer l'état actif */
+}
+
+.active {
+    color: #45a049;
+}
+
+/* Autres éléments (comme les liens d'inscription et connexion) */
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Pour le responsive sur les petits écrans */
+@media (max-width: 768px) {
+    .wrapper, .wrapper-register {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .wrapper h1, .wrapper-register h1 {
+        font-size: 24px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper, .wrapper-register {
+        padding: 15px;
+    }
+
+    .wrapper h1, .wrapper-register h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+        padding: 10px;
+    }
+
+    button {
+        height: 35px;
+        font-size: 12px;
+    }
+}
+
+.back-to-login p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}

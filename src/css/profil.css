@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b0f2b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-wrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.1px);
+    -webkit-backdrop-filter: blur(1.1px);
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    position: fixed; /* Position fixe */
+    top: 20px; /* Distance par rapport au haut de l'écran */
+    left: 20px; /* Distance par rapport à la gauche de l'écran */
+    z-index: 1000; /* Pour s'assurer que le bouton soit au-dessus du contenu */
+}
+
+
+.back-button:hover, .admin-button:hover {
+    background-color: #45a049;
+}
+
+.profile-pic {
+    position: relative;
+    margin: 20px auto;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.info-section {
+    margin-top: 30px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.info-item p {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.links-section {
+    margin-top: 20px;
+}
+
+.links-section a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.links-section a:hover {
+    color: #4CAF50;
+}
+
+/* CV Upload */
+.upload-cv {
+    margin-top: 20px;
+}
+
+.upload-cv input[type="file"] {
+    display: none;
+}
+
+.upload-cv label {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn-upload {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.view_cv{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+}
+.view_projects{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+}
+
+.upload-cv label:hover {
+    background-color: #45a049;
+}
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+/* Style pour le bouton "Se connecter à GitHub" */
+.btn-github {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-github:hover {
+    background-color: #45a049;
+}
+.update-section {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-section label {
+    display: block;
+    font-size: 1em; /* Taille de la police réduite */
+    color: #4CAF50;
+    margin-bottom: 8px;
+}
+
+.update-section input[type="text"],
+.update-section input[type="checkbox"] {
+    width: 90%; /* Largeur réduite */
+    padding: 8px; /* Padding réduit */
+    margin-bottom: 10px; /* Moins d'espacement entre les éléments */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.update-section input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.update-section .btn-update {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px; /* Taille du bouton réduite */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.update-section .btn-update:hover {
+    background-color: #45a049;
+}
+

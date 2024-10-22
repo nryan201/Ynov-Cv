@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b0f2b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alignement au début */
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 20px;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-top: -10%;
+}
+
+/* Liste des profils avec organisation horizontale et retour à la ligne après 5 éléments */
+.profiles-list {
+    display: flex;
+    flex-wrap: wrap; /* Permettre aux profils de passer à la ligne suivante */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centrer les cartes */
+    padding: 20px;
+    max-width: 1200px; /* Limite la largeur totale de la liste */
+}
+
+/* Style des cartes de profil */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    width: 250px; /* Largeur fixe de la carte */
+    height: 300px; /* Hauteur fixe de la carte */
+    padding: 20px; /* Espace à l'intérieur de la carte */
+    text-align: left; /* Alignement du texte à gauche */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Effet de transition */
+    cursor: pointer; /* Curseur pointeur */
+    display: flex; /* Utiliser flex pour l'alignement */
+    flex-direction: column; /* Alignement en colonne */
+    justify-content: space-between; /* Espacement entre les éléments */
+}
+
+.profile-card h3 {
+    font-size: 1.5em; /* Taille du texte pour le nom */
+    color: #4CAF50; /* Couleur pour le nom */
+    margin-bottom: 10px; /* Réduit l'espace sous le titre */
+}
+
+.profile-card p {
+    font-size: 1em; /* Taille du texte pour les informations */
+    color: #fff; /* Couleur du texte */
+    margin: 5px 0; /* Espacement vertical */
+}
+
+.profile-card a {
+    margin-top: 10px; /* Ajouter de l'espace au-dessus du lien */
+    color: #4CAF50; /* Couleur verte */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold; /* Mettre en gras */
+}
+
+.profile-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px); /* Effet d'élévation au survol */
+}
+
+.profile-card a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+.back-button {
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 20px; /* Marge */
+    margin-top: -5px;
+    cursor: pointer; /* Curseur en pointeur */
+    position: fixed; /* Position fixe */
+    top: 20px; /* Distance par rapport au haut de l'écran */
+    left: 20px; /* Distance par rapport à la gauche de l'écran */
+    z-index: 1000; /* Pour s'assurer que le bouton soit au-dessus du contenu */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Couleur plus foncée au survol */
+}

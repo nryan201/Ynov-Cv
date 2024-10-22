@@ -1,0 +1,98 @@
+/* Style général */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+body {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+h1, p {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #0b0f2b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Menu en haut (header) */
+.navbar {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #45a049;
+}
+
+/* Conteneur principal */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 100px; /* Espace pour ne pas être caché derrière le menu */
+}
+
+.welcome-section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    text-align: center;
+    margin-top: -50px; /* Déplace vers le haut */
+}
+
+
+
+.action-buttons a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons a:hover {
+    background-color: #45a049;
+}
