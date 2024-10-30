@@ -1,5 +1,4 @@
 <?php
-// route.php - A simple router for your PHP application
 
 $request = $_SERVER['REQUEST_URI'];
 
