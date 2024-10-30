@@ -3,7 +3,7 @@ session_start();
 
 // Vérification si l'utilisateur est connecté sinon redirection
 if (!isset($_SESSION['username'])) {
-    header('Location: ../../index.php');
+    header('Location: /');
     exit();
 }
 
@@ -23,9 +23,9 @@ $loggedInUsername = $_SESSION['username'];
 $query = "SELECT * FROM users WHERE username='$loggedInUsername'";
 $result = $conn->query($query);
 $user = $result->fetch_assoc();
-$userId = $user['id'];  // On récupère l'ID de l'utilisateur pour relier les projets
+$userId = $user['id'];
 
-$cvUploaded = false; // Variable pour contrôler l'affichage du bouton "Voir CV"
+$cvUploaded = false;
 
 // Gestion de l'upload du CV
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['cv']) && !empty($_FILES['cv']['tmp_name'])) {
@@ -43,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['cv']) && !empty($_FIL
             // Récupérer le contenu du fichier
             $cvContent = file_get_contents($filename);
 
-            // Préparer la requête pour insérer le CV dans la base de données
             $stmt = $conn->prepare("UPDATE users SET cv = ? WHERE username = ?");
             $null = NULL;
             $stmt->bind_param('bs', $null, $loggedInUsername);  // 'b' signifie BLOB
@@ -72,7 +71,6 @@ if (isset($_SESSION['access_token'])) {
     // Appel à l'API GitHub pour obtenir les dépôts, si nécessaire
 }
 
-// Gestion de la mise à jour du statut et du titre du poste
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $status = isset($_POST['status']) ? 1 : 0;  // Si la case est cochée, 1, sinon 0
     if ($status == 0) {
@@ -100,13 +98,13 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
-    <link rel="stylesheet" href="../css/profil.css">
+    <link rel="stylesheet" href="src/css/profil.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
 <!-- Bouton retour -->
-<button class="back-button" onclick="window.location.href='../../index.php';">Retour</button>
+<button class="back-button" onclick="window.location.href='/';">Retour</button>
 
 
 
@@ -147,11 +145,11 @@ $conn->close();
     <!-- Affichage du bouton pour voir le CV si un CV est présent ou s'il a été téléversé avec succès -->
     <?php if ($user['cv'] || $cvUploaded) { ?>
         <div class="action-buttons">
-            <form action="view_cv.php" method="post">
+            <form action="/view_cv" method="post">
                 <button type="submit" class="view_cv">Voir le CV</button>
             </form>
 
-            <form action="projects.php" method="post">
+            <form action="/projects" method="post">
                 <button type="submit" class="view_projects">Voir les projets</button>
             </form>
         </div>

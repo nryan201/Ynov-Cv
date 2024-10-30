@@ -3,7 +3,7 @@ session_start();
 
 // Vérification si l'utilisateur est connecté sinon redirection
 if (!isset($_SESSION['username'])) {
-    header('Location: ../../index.php');
+    header('Location: /');
     exit();
 }
 
@@ -65,12 +65,12 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets</title>
-    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="src/css/projects.css">
 </head>
 <body>
 
 <!-- Bouton retour -->
-<button class="back-button" onclick="window.location.href='profil.php';">Retour</button>
+<button class="back-button" onclick="window.location.href='/profil';">Retour</button>
 
 <div class="main-content">
     <h2>Mes Projets</h2>

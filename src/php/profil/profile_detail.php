@@ -30,11 +30,11 @@ $user = $result->fetch_assoc();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails du Profil</title>
-    <link rel="stylesheet" href="../css/profile_detail.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="src/css/profile_detail.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
 
-<button class="back-button" onclick="window.location.href='../../index.php';">Retour</button>
+<button class="back-button" onclick="window.location.href='/';">Retour</button>
 <div class="profile-wrapper">
     <h2>Détails de <?php echo $user['firstname'] . ' ' . $user['name']; ?></h2>
     <div class="info-section">
@@ -44,7 +44,7 @@ $user = $result->fetch_assoc();
         <p><strong>Status :</strong> <?php echo $user['status'] ? 'Public' : 'Privé'; ?></p>
     </div>
     <?php if ($user['cv']) { ?>
-        <a href="download_cv.php?user=<?php echo $user['firstname'] . ' ' . $user['name']; ?>" class="btn-download">Télécharger le CV</a>
+        <a href="../pdf/download_cv.php?user=<?php echo $user['firstname'] . ' ' . $user['name']; ?>" class="btn-download">Télécharger le CV</a>
     <?php } ?>
 </div>
 

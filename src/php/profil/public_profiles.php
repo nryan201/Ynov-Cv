@@ -21,12 +21,13 @@ $result = $conn->query($query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chercheurs d'Emplois</title>
-    <link rel="stylesheet" href="../css/public_profiles.css"> <!-- Lien vers votre fichier CSS -->
+    <link rel="stylesheet" href="src/css/public_profiles.css"> <!-- Lien vers votre fichier CSS -->
 </head>
 <body>
 
 <!-- Bouton retour -->
-<button class="back-button" onclick="window.location.href='../../index.php';">Retour</button>
+<button class="back-button" onclick="window.location.href='/';">Retour</button>
+
 
 
 <h2>Chercheurs D'Emplois</h2>
@@ -39,7 +40,7 @@ $result = $conn->query($query);
             <p>Email : <?php echo $user['email']; ?></p>
             <p>Poste recherché : <?php echo $user['job_title']; ?></p>
             <?php if ($user['cv']) { ?>
-                <a href="download_cv.php?user=<?php echo $user['firstname'] . ' ' . $user['name']; ?>">Télécharger le CV</a>
+                <a href="../pdf/download_cv.php?user=<?php echo $user['firstname'] . ' ' . $user['name']; ?>">Télécharger le CV</a>
             <?php } ?>
         </div>
     <?php } ?>

@@ -2,14 +2,14 @@
 
 **Ynov-Cv** est une application web conçue pour aider les utilisateurs à créer et gérer efficacement leur CV (Curriculum Vitae). La plateforme permet aux utilisateurs de mettre en avant leurs compétences, projets et expériences tout en offrant des options de visibilité de profil.
 
-## Fonctionnalités
+## Fonctionnalités 🛠️
 
 - **Authentification des utilisateurs** : Les utilisateurs peuvent se connecter à leur compte ou s'inscrire pour créer un nouveau compte.
 - **Gestion de profil** : Les utilisateurs peuvent mettre à jour leur profil, y compris leurs informations personnelles, intitulés de poste et télécharger leur CV.
 - **Gestion de projets** : Les utilisateurs peuvent ajouter et gérer leurs projets, en les liant à leurs profils.
 - **Profils publics** : Les utilisateurs peuvent rendre leur profil public, permettant aux autres de voir leurs informations et de télécharger leur CV.
 
-## Technologies utilisées
+## Technologies utilisées 🖥️
 
 ### Frontend :
 - HTML
